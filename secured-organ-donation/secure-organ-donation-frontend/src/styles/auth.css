@@ -1,0 +1,138 @@
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: radial-gradient(circle at 10% 10%, rgba(20,35,50,0.9) 0%, rgba(10,20,30,0.95) 45%, #0b1a25 100%);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Card */
+.auth-card {
+  width: 520px;
+  max-width: calc(100% - 40px);
+  background: linear-gradient(180deg, rgba(28,38,48,0.85), rgba(18,24,32,0.85));
+  border-radius: 14px;
+  padding: 34px;
+  box-shadow: 0 18px 40px rgba(3,8,14,0.65), inset 0 1px 0 rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #d7e0ea;
+}
+
+/* Titles */
+.auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.auth-sub {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgba(220,225,230,0.65);
+  font-size: 13px;
+}
+
+/* Inputs */
+.input-group { margin-bottom: 14px; }
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255,255,255,0.85);
+  font-size: 14px;
+}
+
+/* main input style */
+.auth-input,
+.auth-select {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.02); /* translucent dark */
+  color: #eef6ff;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+
+/* focus */
+.auth-input:focus,
+.auth-select:focus {
+  border-color: rgba(129, 90, 255, 0.9);
+  box-shadow: 0 6px 20px rgba(94,58,255,0.12);
+}
+
+/* placeholder color */
+.auth-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+/* Button */
+.auth-button {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg,#7b3cff,#19a6ff);
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(12,15,30,0.5);
+}
+.auth-button:disabled { opacity: 0.6; cursor: default; }
+
+/* small error text */
+.error {
+  margin-top: 6px;
+  color: #ff7b7b;
+  font-size: 13px;
+}
+
+/* hospital suggestions */
+.hospital-suggestions small { color: rgba(255,255,255,0.6); }
+.suggestions-list { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+.suggestion-btn {
+  padding:6px 10px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* checkbox row */
+.checkbox-group .checkbox-label { display:flex; gap:10px; align-items:center; color: rgba(255,255,255,0.9); }
+.checkbox-group input[type="checkbox"] { transform: scale(1.05); }
+
+/* --- CUSTOM SELECT ARROW --- */
+.auth-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.9) 50%),
+    linear-gradient(135deg, rgba(255,255,255,0.9) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 6px),
+    calc(100% - 12px) calc(50% - 6px);
+  background-size: 8px 8px, 8px 8px;
+  background-repeat: no-repeat;
+  padding-right: 42px; /* space for arrow */
+}
+
+/* try styling native option list (works in many browsers) */
+.auth-select option {
+  background-color: rgba(18,24,32,0.98);
+  color: #ffffff;
+}
+
+/* small screens: make it full height friendly */
+@media (max-width: 520px) {
+  .auth-card { padding: 24px; width: 100%; border-radius: 10px; }
+  .auth-title { font-size: 22px; }
+}
